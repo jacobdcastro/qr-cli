@@ -1,0 +1,21 @@
+[package]
+name = "qr-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jacob D. Castro <jacob@xiv.systems>"]
+description = "A command-line tool to quickly generate and display QR codes for URLs and other strings."
+repository = "https://github.com/jacobcastro/qr-cli"
+license = "MIT OR Apache-2.0"
+keywords = ["qr", "qrcode", "cli", "generator"]
+categories = ["command-line-utilities", "encoding"]
+readme = "README.md"
+
+[[bin]]
+name = "qr"
+path = "src/main.rs"
+
+[dependencies]
+qrcode = "0.12"
+clap = { version = "4.4", features = ["derive"] }
+image = "0.24"
+resvg = "0.35.0"
